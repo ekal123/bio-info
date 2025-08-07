@@ -10,13 +10,11 @@
       box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
-
     body, html {
       height: 100%;
       background-color: black;
       overflow: hidden;
     }
-
     #startScreen, #mainContent {
       position: absolute;
       width: 100%;
@@ -28,14 +26,12 @@
       background-color: black;
       z-index: 10;
     }
-
     #mainContent {
       display: none;
       flex-direction: column;
       align-items: center;
       z-index: 1;
     }
-
     .led-box {
       border: 3px solid white;
       padding: 40px 80px;
@@ -46,11 +42,9 @@
       font-size: 24px;
       transition: 0.3s;
     }
-
     .led-box:hover {
       box-shadow: 0 0 50px white;
     }
-
     video#bgVideo {
       position: fixed;
       top: 0;
@@ -60,7 +54,6 @@
       object-fit: cover;
       z-index: -1;
     }
-
     .profile-pic {
       width: 220px;
       height: 220px;
@@ -70,13 +63,11 @@
       margin-bottom: 40px;
       box-shadow: 0 0 30px white;
     }
-
     .buttons {
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
-
     .buttons a {
       text-decoration: none;
       color: white;
@@ -90,7 +81,6 @@
       font-weight: bold;
       box-shadow: 0 0 15px white, 0 0 25px white;
     }
-
     .buttons a:hover {
       background-color: white;
       color: black;
@@ -99,31 +89,27 @@
   </style>
 </head>
 <body>
-
 <!-- Start Screen -->
 <div id="startScreen">
   <div class="led-box" onclick="startSite()">MASUK</div>
 </div>
-
 <!-- Main Content -->
 <div id="mainContent">
   <video id="bgVideo" autoplay muted loop playsinline>
-    <source src="https://files.catbox.moe/vogdjr.mp4" type="video/mp4">
+    <source src="" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
-
-  <img src="https://files.catbox.moe/1lpqwo.jpg" alt="Profile" class="profile-pic">
-
+  <img src="" alt="Profile" class="profile-pic">
   <div class="buttons">
-    <a href="https://wa.me/601155431924" target="_blank">WHATSAPP</a>
-    <a href="https://tiktok.com/@this_hykal" target="_blank">TIKTOK</a>
-    <a href="https://www.instagram.com/ekal0349?igsh=MXUyMTN1dmhvNDRkeg==" target="_blank">INSTAGRAM</a>
-    <a href="https://www.youtube.com/@ekalnotdev" target="_blank">YOUTUBE</a>
-    <a href="https://t.me/ekalnotdev" target="_blank">TELEGRAM</a>
-    <a href="https://chat.whatsapp.com/KxEd9UknQ6lJxUr2zJLeov?mode=ac_t" target="_blank">INFO ROBLOCK SEMASA</a>
+    <a href="" target="_blank">WHATSAPP</a>
+    <a href="" target="_blank">TIKTOK</a>
+    <a href="" target="_blank">INSTAGRAM</a>
+    <a href="" target="_blank">YOUTUBE</a>
+    <a href="https://bio-ekal.vercel.app/" target="_blank">My Bio</a>  <!-- Nama link diubah -->
+    <a href="" target="_blank">TELEGRAM</a>
+    <a href="" target="_blank">INFO ROBLOCK SEMASA</a>
   </div>
 </div>
-
 <script>
   function startSite() {
     const video = document.getElementById('bgVideo');
@@ -133,6 +119,5 @@
     video.play();
   }
 </script>
-
 </body>
 </html>
