@@ -40,26 +40,40 @@
       border: 8px solid white;
       padding: 90px 200px;
       border-radius: 24px;
-      box-shadow: 
-        0 0 100px white,
-        0 0 160px white,
-        0 0 240px white,
-        inset 0 0 40px white,
-        inset 0 0 80px white;
+      position: relative;
       cursor: pointer;
       color: white;
       font-size: 60px;
       font-weight: bold;
+      background-color: black;
+      box-shadow: 
+        0 0 50px white,
+        0 0 100px white,
+        0 0 150px white,
+        inset 0 0 40px white;
       transition: 0.3s;
     }
 
+    .led-box::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      right: -15px;
+      bottom: -15px;
+      border-radius: 30px;
+      box-shadow:
+        0 0 40px 20px white,
+        0 0 80px 40px white;
+      z-index: -1;
+    }
+
     .led-box:hover {
-      box-shadow: 
+      box-shadow:
+        0 0 80px white,
         0 0 160px white,
         0 0 240px white,
-        0 0 320px white,
-        inset 0 0 60px white,
-        inset 0 0 120px white;
+        inset 0 0 80px white;
     }
 
     video#bgVideo {
@@ -131,7 +145,7 @@
     <a href="https://www.instagram.com/ekal0349?igsh=MXUyMTN1dmhvNDRkeg==" target="_blank">INSTAGRAM</a>
     <a href="https://www.youtube.com/@ekalnotdev" target="_blank">YOUTUBE</a>
     <a href="https://t.me/ekalnotdev" target="_blank">TELEGRAM</a>
-    <a href="https://chat.whatsapp.com/KxEd9UknQ6lJxUr2zJLeov?mode=ac_t" target="_blank">GROUP ROBLOCK GANU</a>
+    <a href="https://chat.whatsapp.com/KxEd9UknQ6lJxUr2zJLeov?mode=ac_t" target="_blank">GRUP INFO ROBLOCK</a>
   </div>
 </div>
 
