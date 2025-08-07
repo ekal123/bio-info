@@ -1,40 +1,175 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Link Bio RIKI ( TAMPAN KATA MAMAH )</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman Bio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body, html {
+      height: 100%;
+      overflow: hidden;
+    }
+    #intro {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+    #enter-btn {
+      padding: 15px 30px;
+      font-size: 20px;
+      color: white;
+      background-color: #111;
+      border: 2px solid white;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    #enter-btn:hover {
+      background-color: white;
+      color: black;
+    }
+    #video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+    #audio-player {
+      display: none;
+    }
+    .content {
+      display: none;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding-top: 80px;
+      color: white;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      box-shadow: 0 0 15px white;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      margin-top: 30px;
+    }
+    .buttons a {
+      text-decoration: none;
+      width: 80%;
+      max-width: 300px;
+    }
+    .buttons button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: rgba(255,255,255,0.1);
+      color: white;
+      backdrop-filter: blur(5px);
+    }
+    .buttons button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    @media (max-width: 600px) {
+      .profile-img {
+        width: 120px;
+        height: 120px;
+      }
+      .buttons button {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <video loop id="video-bg">
-        <source src="bgmove.mp4" type="video/mp4">
-        Browser Anda tidak mendukung tag video.
-    </video>
-    
-    <div class="overlay"></div>
 
-    <div id="loading-overlay">
-        <button id="enter-button">Masuk</button>
+  <!-- Intro Screen -->
+  <div id="intro">
+    <button id="enter-btn">Masuk</button>
+  </div>
+
+  <!-- Background Video -->
+  <video id="video-bg" autoplay loop muted playsinline>
+    <source src="https://files.catbox.moe/vogdjr.mp4" type="video/mp4">
+    Browser tidak mendukung video.
+  </video>
+
+  <!-- Audio -->
+  <audio id="audio-player" autoplay loop>
+    <source src="https://files.catbox.moe/vogdjr.mp4" type="audio/mp4">
+  </audio>
+
+  <!-- Content -->
+  <div class="content" id="main-content">
+    <img src="https://files.catbox.moe/1lpqwo.jpg" alt="Foto Profil" class="profile-img">
+    <h2>HAIKAL GANTENG</h2>
+
+    <div class="buttons">
+      <a href="https://wa.me/601155431924" target="_blank">
+        <button><i class="fab fa-whatsapp"></i> WhatsApp</button>
+      </a>
+      <a href="https://tiktok.com/@this_hykal" target="_blank">
+        <button><i class="fab fa-tiktok"></i> TikTok</button>
+      </a>
+      <a href="https://www.instagram.com/ekal0349?igsh=MXUyMTN1dmhvNDRkeg==" target="_blank">
+        <button><i class="fab fa-instagram"></i> Instagram</button>
+      </a>
+      <a href="https://www.youtube.com/@ekalnotdev" target="_blank">
+        <button><i class="fab fa-youtube"></i> YouTube</button>
+      </a>
+      <a href="https://t.me/ekalnotdev" target="_blank">
+        <button><i class="fab fa-telegram"></i> Telegram</button>
+      </a>
+      <a href="https://chat.whatsapp.com/KxEd9UknQ6lJxUr2zJLeov?mode=ac_t" target="_blank">
+        <button><i class="fab fa-whatsapp"></i> INFO ROBLOCK SEMASA</button>
+      </a>
     </div>
+  </div>
 
-    <div id="main-content">
-        <div class="fixed-top-content">
-            <header class="fixed-header">
-                <font color="#FFFFFF" style="text-shadow: 0 0 10px #00F; animation: bersinar 2s infinite;"><marquee>Selamat Datang di Halaman Bio Saya! - Hubungi Kontak atau Gabung Grup di Bawah Ini Terimakasih</marquee></font>
-            </header>
+  <!-- Script -->
+  <script>
+    const enterBtn = document.getElementById('enter-btn');
+    const intro = document.getElementById('intro');
+    const mainContent = document.getElementById('main-content');
+    const audio = document.getElementById('audio-player');
 
-<!-- Nailong kiri -->
-<img class="nailong nailong-left" src="io-greenscreenkim-175304026866-unscreen.gif" alt="Nailong Kiri">
-
-<!-- Nailong kanan -->
-<img class="nailong nailong-right" src="io-greenscreenkim-175304026866-unscreen.gif" alt="Nailong Kanan">
-
-<!-- Foto Profil Bulat -->
-<img src="https://files.catbox.moe/1lpqwo.jpg" alt="Foto Profil" class="profile-picture">
+    enterBtn.addEventListener('click', () => {
+      intro.style.display = 'none';
+      mainContent.style.display = 'block';
+      audio.play();
+    });
+  </script>
+</body>
+</html><img src="https://files.catbox.moe/1lpqwo.jpg" alt="Foto Profil" class="profile-picture">
 
 <h1>
     EKAL 
